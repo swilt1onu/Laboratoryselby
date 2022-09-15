@@ -1,0 +1,46 @@
+/*
+File: Lab3-1consoleInputOutput
+Selby Wilt
+9/1/2022
+Message program*/
+
+#include <iostream>
+#include <cmath>
+#include <string>
+using namespace std;
+int main() {
+	int inputNum;
+
+	cout << "enter an integer:";     //gets the integer
+	cin >> inputNum;
+
+	inputNum = abs(inputNum);         //changes the integer to absolute value
+
+	if (inputNum < 10) {                           //finds the number of digits in the number
+		cout << "The number has one digit";
+	}
+	else if (inputNum < 100) {
+		cout << "The number has two digits";
+	}
+	else if (inputNum < 1000) {
+		cout << "The number has three digits";
+	}
+	else if (inputNum < 10000) {
+		cout << "The number has four digits";
+	}
+	else if (inputNum < 100000) {
+		cout << "The number has five digits";
+	}
+	else if (inputNum < 1000000) {
+		cout << "The number has six digits";
+	}
+	else if (inputNum < 10000000) {
+		cout << "The number has seven digits";
+	}
+	else if (inputNum < 100000000) {
+		cout << "The number has eight digits";
+	}
+	else if (inputNum < 1000000000) {
+		cout << "The number has nine digits";
+	}
+}
