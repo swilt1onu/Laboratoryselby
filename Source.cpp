@@ -1,46 +1,36 @@
-// conversion.cpp - Selby Wilt - 25 August 2022
-// Program will accept input in the form: number letter (e.g. 32 F)
-// and will convert the specified temperature from Fahrenheit to Celsius,
-// or vice versa, depending on input (either C or F).
-#include <iostream> // import library that allows us to use cin and cout
-using namespace std; // considered "magic" until later...
-const char FAHRENHEIT = 'F';
-const char CELSIUS = 'C';
-int main(void) {
-	// enter "magic formula" for formatting floating-point output values
-	cout.setf(ios::fixed);
-	cout.setf(ios::showpoint);
-	cout.precision(1);
-	// variable declarations
-	double inputTemperature;
-	double convertedTemperature;
-	char temperatureScale;
-	char convertedScale;
-	// get the temperature to be converted
-	cout << "Please enter temperature - indicate scale with C or F: ";
-	cin >> inputTemperature >> temperatureScale;
-	// determine if legal scale was entered
-	if (temperatureScale != FAHRENHEIT && temperatureScale != CELSIUS) {
-		// bailing out of program due to illegal input
-		cout << "Sorry - temperature scale must be either C or F.\n";
-		cout << "Press 'Enter' to continue...";
-		cin.ignore();
-		cin.get();
-		return 1;
+/*
+File: Lab5-1
+Selby Wilt
+program*/
+
+#include <iostream>
+#include <cmath>
+#include <string>
+#include <iomanip>
+using namespace std;
+int main() {
+	int sumOfNumbers = 0;
+	int sqOfNumbers = 0;
+
+
+	for (int counter = 2; counter <= 100; counter += 2)
+	{
+		sumOfNumbers += counter;
 	}
-	// determine what conversion formula to use
-	if (temperatureScale == FAHRENHEIT) {
-		convertedTemperature = (inputTemperature - 32.0) * 5.0 / 9.0;
-		convertedScale = CELSIUS;
+	
+	cout << "The sum of all even numbers between 2 and 100, inclusive, is " << sumOfNumbers << endl;
+
+	for (int counter = 1; counter <= 100; counter += 1)
+	{
+		sqOfNumbers = pow(counter, 2) + sqOfNumbers;
 	}
-	else { // input was in Celsius
-		convertedTemperature = 9.0 / 5.0 * inputTemperature + 32.0;
-		convertedScale = FAHRENHEIT;
-	}
-	// present result and terminate program execution
-	cout << convertedTemperature << " " << convertedScale << endl;
-	cout << "Press 'Enter' to continue...";
-	cin.ignore();
-	cin.get();
+
+	cout << "The sum of all squares between 1 and 100, inclusive, is " << sqOfNumbers << endl;
+
+
+
+
 	return 0;
 }
+
+
