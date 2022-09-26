@@ -1,0 +1,124 @@
+/*
+File: Lab5-4
+Selby Wilt
+program*/
+
+#include <iostream>
+#include <cmath>
+#include <string>
+#include <iomanip>
+using namespace std;
+int main() {
+	int value = 0;
+	int digit1 = 0;
+	int digit2 = 0;
+	int digit3 = 0;
+	int digit4 = 0;
+	int digit5 = 0;
+	int digit6 = 0;
+	int digit7 = 0;
+	int digit8 = 0;
+	int digitEvenSum = 0;
+	int digitOddSum = 0;
+	int sumOfValue = 0;
+	int sumOfValue2 = 0;
+	int total;
+	int tempdigit1 = 0;
+	int tempdigit2 = 0;
+
+	cout << "Enter a non-zero, positive value: ";
+	cin >> value;
+
+	while (value > 0)
+	{
+		digit1 = value % 10;
+		digitOddSum = digitOddSum + digit1;
+		value = value / 10;
+
+		digit2 = value % 10;
+		digit2 = digit2 * 2;
+
+		if (digit2 >= 10)
+		{
+			tempdigit1 = digit2 % 10;
+			tempdigit2 = digit2 / 10;
+			digitEvenSum = digitEvenSum + tempdigit1 + tempdigit2;
+		}
+		else
+		{
+			digitEvenSum = digitEvenSum + digit2;
+		}
+		value /= 10;
+
+		digit3 = value % 10;
+		digitOddSum = digitOddSum + digit3;
+		value /= 10;
+
+		digit4 = value % 10;
+		digit4 = digit4 * 2;
+
+		if (digit4 >= 10)
+		{
+			tempdigit1 = digit4 % 10;
+			tempdigit2 = digit4 / 10;
+			digitEvenSum = digitEvenSum + tempdigit1 + tempdigit2;
+		}
+		else
+		{
+			digitEvenSum = digitEvenSum + digit4;
+		}
+		value /= 10;
+
+		digit5 = value % 10;
+		digitOddSum = digitOddSum + digit5;
+		value /= 10;
+
+		digit6 = value % 10;
+		digit6 = digit6 * 2;
+
+		if (digit6 >= 10)
+		{
+			tempdigit1 = digit6 % 10;
+			tempdigit2 = digit6 / 10;
+			digitEvenSum = digitEvenSum + tempdigit1 + tempdigit2;
+		}
+		else
+		{
+			digitEvenSum = digitEvenSum + digit6;
+		}
+		value /= 10;
+		
+		digit7 = value % 10;
+		digitOddSum = digitOddSum + digit7;
+		value /= 10;
+
+		digit8 = value % 10;
+		digit8 = digit8 * 2;
+
+		if (digit8 >= 10)
+		{
+			tempdigit1 = digit8 % 10;
+			tempdigit2 = digit8 / 10;
+			digitEvenSum = digitEvenSum + tempdigit1 + tempdigit2;
+		}
+		else
+		{
+			digitEvenSum = digitEvenSum + digit8;
+		}
+		value /= 10;
+
+	}
+	total = digitOddSum + digitEvenSum;
+
+	total = total % 10;
+
+	if (total == 0)
+	{
+		cout << "Card is Valid";
+	}
+	else
+	{
+		cout << "Card is Invalid";
+	}
+
+}
