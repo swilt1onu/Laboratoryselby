@@ -60,6 +60,7 @@ int main() {
 		numOfRegular = numOfRegular - 12;
 	}
 
+	
 	/*
 	* calculating the amount the customer owes before tax by adding all of the variables together
 	* and multiplying by their constant's corresponding values taking into account the dozen donuts ordered
