@@ -84,9 +84,9 @@ int main() {
 
 
 	int quartersOwed;                  // number of quarters owed 
-	int dollarsOwed;				   // number of dollars owed
-	int dimesOwed;					   // number of dimes owed
-	int nickelsOwed;			       // number of nickles owed
+	int dollarsOwed;		   // number of dollars owed
+	int dimesOwed;		           // number of dimes owed
+	int nickelsOwed;	           // number of nickles owed
 	int penniesOwed;                   // number of pennies owed
 
 
