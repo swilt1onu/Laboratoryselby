@@ -31,7 +31,7 @@ int main() {
 	for (int qz = 0; qz < QUIZZES; qz++) {
 
 		for (int st = 0; st < STUDENTS; st++) {
-			cout << "Quiz " << (qz + 1) << " score for " << names[qz] << ": ";
+			cout << "Quiz " << (qz + 1) << " score for " << names[st] << ": ";
 			cin >> scores[st][qz];
 		}
 	}
