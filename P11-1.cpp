@@ -89,8 +89,10 @@ int main() {
 		if (seats[arrayRow][arrayCol] == 'X')
 			cout << "Sorry, Seat Already taken\n\n";
 
+		else if(seats[arrayRow][arrayCol] == ' ')
+			cout << "Sorry, no such seat exists on the CRJ 200\n";
 
-		if (arrayCol > 12 || arrayRow < 0) {
+		else if (arrayCol > 12 || arrayRow < 0) {
 			cout << "Sorry, no such seat exists on the CRJ 200\n";
 		}
 
