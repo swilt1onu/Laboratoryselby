@@ -26,8 +26,7 @@ void pressEnterToContinue() {
 
     cout << "\nPress enter to continue... \n";
     cin.clear();
-    while (cin.get() != '\n')
-        continue;
+    while (cin.get() != '\n') continue;
 
 }
 
@@ -35,7 +34,6 @@ bool fileWordCount(string  filename) {
 
     ifstream inFile;
     string word;
-    string notThis = "-";
     int wordCount = 0;
     inFile.open(filename);
 
@@ -49,8 +47,8 @@ bool fileWordCount(string  filename) {
 
         if (inFile.fail())
             break;
-        if (0 != notThis.compare(word))
-            wordCount++;
+
+        wordCount++;
     }
 
     cout << "Words: " << wordCount << endl;
@@ -77,7 +75,7 @@ bool fileLength(string filename) {
         if (inFile.fail())
             break;
 
-        if (currentChar != ' ' && currentChar != '\n' && currentChar != ',' && currentChar != '.' && currentChar != '-')
+        if (currentChar != ' ' && currentChar != '\n')
             length++;
     }
 
